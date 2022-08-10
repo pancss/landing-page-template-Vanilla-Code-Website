@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700;800&family=Kanit:wght@400;500&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <!-- Bootrap icon -->
@@ -33,13 +33,13 @@
           <li><a href="#">คำถามที่พบบ่อย</a></li>
           <li><a href="#">ช่องทางการติดต่อ</a></li>
         </nav>
-        <button>ติดต่อเรา</button>
+        <a href="https://m.me/woosanook"><button>ติดต่อเรา</button></a>
       </div>
     </header>
     <!-- Banner -->
     <section id="banner">
       <div>
-        <h1>VANILLA<b>CODE</b></h1>
+        <h1>VANILLA <b>CODE</b></h1>
         <p>บริการออกแบบเว็บไซต์ Wordpress เว็บ Responsive 100%</p>
         <p>รองรับอุปกรณ์ทุกชนิดหน้าเว็บไซต์ไม่เพี้ยนในราคาประหยัด รองรับ SEO</p>
         <button>ติดต่อเรา</button>
@@ -48,6 +48,7 @@
     </section>
     <!-- Package Prices -->
     <section>
+      <p class="title">Package Prices</p>
       <div class="container-prices">
         <!-- Silver -->
         <div>
@@ -64,6 +65,7 @@
         </div>
         <!-- Gold -->
         <div>
+          <div class="recommended">RECOMMENDED</div>
           <p>Gold Package</p>
           <small>ราคาเริ่มต้น 4,500฿</small>
           <ul>
@@ -97,50 +99,88 @@
           </ul>
         </div>
       </div>
-      <p><b>*** ราคานี้ยังไม่รวม Hosting + Domain ***</b></p>
+      <p style="text-align: center; margin-top: 25px">
+        <b>*** ราคานี้ยังไม่รวม Hosting + Domain ***</b>
+      </p>
     </section>
     <!-- Portfolio -->
-    <section>
+    <section id="portfolio">
       <!-- Title Portfolio -->
       <div class="container-title">
         <div>
-          <p class="title">Our Portfolio</p>
+          <p>Our Portfolio</p>
           <p>SOME OF OUR RECENT WORKS</p>
         </div>
         <a href="javascript:void(0)"><button>ดูทั้งหมด</button></a>
       </div>
       <!-- Recent works -->
-      <div>
+      <div class="container-recent-works">
         <div class="items-recent-works">
-          <img src="./source/p-polluxdesign.webp" alt="polluxdesign" />
+          <a href="https://www.polluxdesign.co.th/" class="container-img">
+            <div class="before-item">
+              <i class="bi bi-search"></i>
+              <p>VISIT WEBSITE</p>
+            </div>
+            <img src="./source/p-polluxdesign.webp" alt="polluxdesign" />
+          </a>
           <p>POLLUX DESIGN</p>
           <p>www.polluxdesign.co.th</p>
         </div>
         <div class="items-recent-works">
-          <img src="./source/p-mashangthai.webp" alt="mashangthai" />
+          <a href="https://www.mashangthai.com/" class="container-img">
+            <div class="before-item">
+              <i class="bi bi-search"></i>
+              <p>VISIT WEBSITE</p>
+            </div>
+            <img src="./source/p-mashangthai.webp" alt="mashangthai" />
+          </a>
           <p>MASHANG</p>
           <p>www.mashangthai.com</p>
         </div>
         <div class="items-recent-works">
-          <img
-            src="./source/p-sirithornfurniture.webp"
-            alt="sirithornfurniture"
-          />
+          <a href="https://www.sirithornfurniture.com/" class="container-img">
+            <div class="before-item">
+              <i class="bi bi-search"></i>
+              <p>VISIT WEBSITE</p>
+            </div>
+            <img
+              src="./source/p-sirithornfurniture.webp"
+              alt="sirithornfurniture"
+            />
+          </a>
           <p>สิริธรไม้สัก</p>
           <p>www.sirithornfurniture.com</p>
         </div>
         <div class="items-recent-works">
-          <img src="./source/p-ngsolarplus.webp" alt="ngsolarplus" />
+          <a href="https://ngsolarplus.com/" class="container-img">
+            <div class="before-item">
+              <i class="bi bi-search"></i>
+              <p>VISIT WEBSITE</p>
+            </div>
+            <img src="./source/p-ngsolarplus.webp" alt="ngsolarplus" />
+          </a>
           <p>NG SOLAR PLUS</p>
           <p>www.ngsolarplus.com</p>
         </div>
         <div class="items-recent-works">
-          <img src="./source/p-rush.webp" alt="rush" />
+          <a href="https://rush.in.th/" class="container-img">
+            <div class="before-item">
+              <i class="bi bi-search"></i>
+              <p>VISIT WEBSITE</p>
+            </div>
+            <img src="./source/p-rush.webp" alt="rush" />
+          </a>
           <p>RUSH</p>
           <p>www.rush.in.th</p>
         </div>
         <div class="items-recent-works">
-          <img src="./source/p-picnikmarket.webp" alt="picnikmarket" />
+          <a href="https://picnikmarket.com/" class="container-img">
+            <div class="before-item">
+              <i class="bi bi-search"></i>
+              <p>VISIT WEBSITE</p>
+            </div>
+            <img src="./source/p-picnikmarket.webp" alt="picnikmarket" />
+          </a>
           <p>PICNIK ตลาดสดออนไลน์</p>
           <p>www.picnikmarket.com</p>
         </div>
@@ -148,7 +188,7 @@
     </section>
     <!-- Why us -->
     <section>
-      <h2>ทำไมต้องเลือก VANILLA CODE</h2>
+      <h2 class="title">ทำไมต้องเลือก VANILLA CODE</h2>
       <div class="container-why-us">
         <div>
           <div class="icon-float">
@@ -192,12 +232,12 @@
     </section>
     <!-- Step work -->
     <section>
-      <h3>ขั้นตอนการทำงาน</h3>
-      <img src="./source/steps-work.webp" alt="ขั้นตอนการทำงาน" />
+      <h3 class="title">ขั้นตอนการทำงาน</h3>
+      <img src="./source/steps-work.webp" alt="ขั้นตอนการทำงาน" style="max-width: 100%;" />
     </section>
     <!-- FAQ -->
     <section>
-      <h4>คำถามที่พบบ่อย</h4>
+      <h4 class="title">คำถามที่พบบ่อย</h4>
       <li>
         ต้องเริ่มอย่างไรหากต้องการจ้างงานพวกเรา <i class="bi bi-plus"></i>
         <div class="desc">
@@ -214,23 +254,25 @@
         </div>
       </li>
       <li>
-        ไม่รู้ว่าจะเริ่มเตรียมข้อมูลอย่างไร ยังไม่มีข้อมูลอะไรเลย สามารถติดต่อได้ช่องทางไหนบ้าง <i class="bi bi-plus"></i>
+        ไม่รู้ว่าจะเริ่มเตรียมข้อมูลอย่างไร ยังไม่มีข้อมูลอะไรเลย
+        สามารถติดต่อได้ช่องทางไหนบ้าง <i class="bi bi-plus"></i>
         <div class="desc">
           <li>
-            สามารถติดต่อทีมงานทาง Inbox FACEBOOK ได้เลยเดี๋ยวจะมีทีมงานคอยแนะนำ และให้คำปรึกษา
+            สามารถติดต่อทีมงานทาง Inbox FACEBOOK ได้เลยเดี๋ยวจะมีทีมงานคอยแนะนำ
+            และให้คำปรึกษา
           </li>
         </div>
       </li>
       <li>
-        หากมีตัวอย่างเว็บไซต์แล้ว สามารถส่งให้ประเมินราคาได้ที่ช่องทางไหน <i class="bi bi-plus"></i>
+        หากมีตัวอย่างเว็บไซต์แล้ว สามารถส่งให้ประเมินราคาได้ที่ช่องทางไหน
+        <i class="bi bi-plus"></i>
         <div class="desc">
-          <li>
-            สามารถส่งเว็บไซต์ตัวอย่าง ให้กับทีมงานทาง Inbox FACEBOOK
-          </li>
+          <li>สามารถส่งเว็บไซต์ตัวอย่าง ให้กับทีมงานทาง Inbox FACEBOOK</li>
         </div>
       </li>
       <li>
-        หากอยากลองปรึกษาก่อนตัดสินใจทำเว็บไซต์ สามารถติดต่อได้ทางไหนบ้าง <i class="bi bi-plus"></i>
+        หากอยากลองปรึกษาก่อนตัดสินใจทำเว็บไซต์ สามารถติดต่อได้ทางไหนบ้าง
+        <i class="bi bi-plus"></i>
         <div class="desc">
           <li>
             ทางเรายินดีให้คำปรึกษา สามารถติดต่อทีมงานทาง Inbox FACEBOOK ได้เลย
@@ -238,11 +280,10 @@
         </div>
       </li>
       <li>
-        ถ้าหากต้องการให้จด Domain และหา Hosting ให้ด้วยสามารถทำได้มั้ย มีค่าบริการอย่างไร <i class="bi bi-plus"></i>
+        ถ้าหากต้องการให้จด Domain และหา Hosting ให้ด้วยสามารถทำได้มั้ย
+        มีค่าบริการอย่างไร <i class="bi bi-plus"></i>
         <div class="desc">
-          <li>
-            สามารถทำได้ราคาเริ่มต้น 1,500 บาท แล้วแต่ลูกค้าเลือก
-          </li>
+          <li>สามารถทำได้ราคาเริ่มต้น 1,500 บาท แล้วแต่ลูกค้าเลือก</li>
         </div>
       </li>
       <li>
@@ -256,7 +297,7 @@
     </section>
     <!-- Contacts -->
     <section>
-      <h5>ช่องทางการติดต่อ</h5>
+      <h5 class="title">ช่องทางการติดต่อ</h5>
       <div>
         <a href="https://www.facebook.com/WooSaNook">
           <img src="./source/fb.webp" />
