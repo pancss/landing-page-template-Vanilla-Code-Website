@@ -26,16 +26,34 @@
       <img src="./source/logo.webp" alt="logo" />
       <div>
         <nav>
-          <li><a href="#">หน้าหลัก</a></li>
-          <li><a href="#">บริการของเรา</a></li>
-          <li><a href="#">ผลงานของเรา</a></li>
-          <li><a href="#">ขั้นตอนการทำงาน</a></li>
-          <li><a href="#">คำถามที่พบบ่อย</a></li>
-          <li><a href="#">ช่องทางการติดต่อ</a></li>
+          <li class="actived"><a href="#banner">หน้าหลัก</a></li>
+          <li><a href="#price-section">บริการของเรา</a></li>
+          <li><a href="#portfolio">ผลงานของเรา</a></li>
+          <li><a href="#why-us">ทำไมต้องเลือกเรา</a></li>
+          <li><a href="#workflow">ขั้นตอนการทำงาน</a></li>
+          <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+          <li><a href="#contact-us">ติดต่อ</a></li>
         </nav>
         <a href="https://m.me/woosanook"><button>ติดต่อเรา</button></a>
       </div>
     </header>
+    <section id="sidebar">
+      <button class="toggle">
+        <div class="container-solid">
+        <span></span>
+        <span></span>
+      </button>
+      </div>
+      <ul>
+        <li class="actived"><a href="#banner">หน้าหลัก</a></li>
+        <li><a href="#price-section">บริการของเรา</a></li>
+        <li><a href="#portfolio">ผลงานของเรา</a></li>
+        <li><a href="#why-us">ทำไมต้องเลือกเรา</a></li>
+        <li><a href="#workflow">ขั้นตอนการทำงาน</a></li>
+        <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+        <li><a href="#contact-us">ติดต่อ</a></li>
+      </ul>
+    </section>
     <!-- Banner -->
     <section id="banner">
       <div>
@@ -47,7 +65,7 @@
       <img src="./source/img-banner.webp" />
     </section>
     <!-- Package Prices -->
-    <section>
+    <section id="price-section">
       <p class="title">Package Prices</p>
       <div class="container-prices">
         <!-- Silver -->
@@ -187,7 +205,7 @@
       </div>
     </section>
     <!-- Why us -->
-    <section>
+    <section id="why-us">
       <h2 class="title">ทำไมต้องเลือก VANILLA CODE</h2>
       <div class="container-why-us">
         <div class="contents">
@@ -233,7 +251,7 @@
       </div>
     </section>
     <!-- Step work -->
-    <section>
+    <section id="workflow">
       <h3 class="title">ขั้นตอนการทำงาน</h3>
       <img
         src="./source/steps-work.webp"
@@ -251,52 +269,61 @@
         <div class="desc">
           <li>
             แจ้งสิ่งที่ต้องการ เช่น อยากทำเว็บไซต์แบบไหน โทนสีอะไร
-            ทำเว็บไซต์เกี่ยวกับอะไร หรือเพื่อความรวดเร็วสามารถส่งเว็บไซต์ตัวอย่างที่ต้องการ ให้กับทีมงานทาง <a href="https://m.me/woosanook">FACEBOOK</a> หรือช่องทางอื่น ๆ
+            ทำเว็บไซต์เกี่ยวกับอะไร
+            หรือเพื่อความรวดเร็วสามารถส่งเว็บไซต์ตัวอย่างที่ต้องการ
+            ให้กับทีมงานทาง
+            <a href="https://m.me/woosanook">FACEBOOK</a> หรือช่องทางอื่น ๆ
             ได้เลย
           </li>
         </div>
       </ul>
       <ul>
         <div class="question">
-          ไม่รู้ว่าจะเริ่มเตรียมข้อมูลอย่างไร ยังไม่มีข้อมูลอะไรเลย สามารถติดต่อปรึกษาได้ที่ช่องทางไหนบ้าง <i class="bi bi-plus"></i>
+          ไม่รู้ว่าจะเริ่มเตรียมข้อมูลอย่างไร ยังไม่มีข้อมูลอะไรเลย
+          สามารถติดต่อปรึกษาได้ที่ช่องทางไหนบ้าง <i class="bi bi-plus"></i>
         </div>
         <div class="desc">
           <li>
-            สามารถติดต่อทีมงานทาง <a href="https://m.me/woosanook">FACEBOOK</a> หรือช่องทางอื่น ๆ
+            สามารถติดต่อทีมงานทาง
+            <a href="https://m.me/woosanook">FACEBOOK</a> หรือช่องทางอื่น ๆ
             ได้เลยเดี๋ยวจะมีทีมงานคอยแนะนำ และให้คำปรึกษา
           </li>
         </div>
       </ul>
       <ul>
         <div class="question">
-          หากมีตัวอย่างเว็บไซต์แล้ว สามารถส่งให้ประเมินราคาได้ที่ช่องทางไหน <i class="bi bi-plus"></i>
+          หากมีตัวอย่างเว็บไซต์แล้ว สามารถส่งให้ประเมินราคาได้ที่ช่องทางไหน
+          <i class="bi bi-plus"></i>
         </div>
         <div class="desc">
           <li>
-            สามารถส่งเว็บไซต์ตัวอย่างให้กับทีมงานทาง <a href="https://m.me/woosanook">FACEBOOK</a> หรือช่องทางอื่น ๆ
+            สามารถส่งเว็บไซต์ตัวอย่างให้กับทีมงานทาง
+            <a href="https://m.me/woosanook">FACEBOOK</a> หรือช่องทางอื่น ๆ
             ได้เลย
           </li>
         </div>
       </ul>
       <ul>
         <div class="question">
-          ไม่เคยมีเว็บไซต์มาก่อน สามารถปรึกษาก่อนตัดสินใจทำเว็บไซต์ได้หรือไม่<i class="bi bi-plus"></i>
+          ไม่เคยมีเว็บไซต์มาก่อน สามารถปรึกษาก่อนตัดสินใจทำเว็บไซต์ได้หรือไม่<i
+            class="bi bi-plus"
+          ></i>
         </div>
         <div class="desc">
           <li>
-            ทางเรายินดีให้คำปรึกษา สามารถติดต่อทีมงานทาง <a href="https://m.me/woosanook">FACEBOOK</a> หรือช่องทางอื่น ๆ
+            ทางเรายินดีให้คำปรึกษา สามารถติดต่อทีมงานทาง
+            <a href="https://m.me/woosanook">FACEBOOK</a> หรือช่องทางอื่น ๆ
             ได้เลย
           </li>
         </div>
       </ul>
       <ul>
         <div class="question">
-          ถ้าหากต้องการให้จด Domain และหา Hosting ให้ด้วยสามารถทำได้มั้ย มีค่าบริการอย่างไร <i class="bi bi-plus"></i>
+          ถ้าหากต้องการให้จด Domain และหา Hosting ให้ด้วยสามารถทำได้มั้ย
+          มีค่าบริการอย่างไร <i class="bi bi-plus"></i>
         </div>
         <div class="desc">
-          <li>
-            สามารถทำได้ราคาเริ่มต้น 1,500 บาท แล้วแต่แพคเกจที่ลูกค้าเลือก
-          </li>
+          <li>สามารถทำได้ราคาเริ่มต้น 1,500 บาท แล้วแต่แพคเกจที่ลูกค้าเลือก</li>
         </div>
       </ul>
       <ul>
@@ -305,7 +332,9 @@
         </div>
         <div class="desc">
           <li>
-            สามารถแจ้งรายละเอียดต่าง ๆ ทาง <a href="https://m.me/woosanook">FACEBOOK</a> หรือช่องทางอื่น ๆ เพื่อให้ทีมงานเข้าไปปรับปรุงแก้ไขได้เลย
+            สามารถแจ้งรายละเอียดต่าง ๆ ทาง
+            <a href="https://m.me/woosanook">FACEBOOK</a> หรือช่องทางอื่น ๆ
+            เพื่อให้ทีมงานเข้าไปปรับปรุงแก้ไขได้เลย
           </li>
         </div>
       </ul>
