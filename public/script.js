@@ -72,6 +72,8 @@
             createSoftLightBg(false);
             // unfix scroll
             document.body.style.overflow = '';
+            document.querySelector('html').style.overflow = '';
+            
         } else {
             toggle.classList.add('actived')
             // Displaysidebar
@@ -80,6 +82,7 @@
             createSoftLightBg(true);
             // fix scroll
             document.body.style.overflow = 'hidden';
+            document.querySelector('html').style.overflow = 'hidden';
         }
     }
     function hideShowSidebar(result) {
