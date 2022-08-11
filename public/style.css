@@ -123,6 +123,9 @@ header button:hover {
 #banner p {
   font-size: 20px;
 }
+#banner p br{
+  display: none;
+}
 
 #banner button {
   font-size: 14px;
@@ -438,13 +441,12 @@ header button:hover {
 }
 
 /* Contact-us */
-#contact-us {
-  max-width: 300px;
-}
 #contact-us div {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  max-width: 300px;
+  margin: 0 auto;
 }
 #contact-us div a {
   text-align: center;
@@ -611,7 +613,8 @@ section {
   #banner > div {
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 0;
+    padding: 0 20px;
     transform: translateY(-50%);
   }
   #banner img {
@@ -643,10 +646,42 @@ section {
   }
 }
 @media screen and (max-width: 426px){
+  #banner{
+    margin-bottom: -20px;
+  }
+  #banner p{
+    font-size: 16px;
+  }
+  #banner p br{
+    display: block;
+  }
+  .container-prices > div{
+    padding: 40px 25px 20px 25px;
+  }
+  #portfolio .container-title{
+    flex-wrap: wrap;
+   justify-content: flex-end;
+   margin: 30px 0 15px 0;
+  }
+  #portfolio .container-title > div{
+    width: 100%;
+  }
+  #portfolio .container-title a{
+    margin-top: 10px;
+  }
   .container-recent-works{
     grid-template-columns: 1fr;
   }
   #why-us .title br{
     display: block;
+  }
+  section{
+    padding-top: 20px;
+  }
+  .container-why-us .contents{
+    gap: 20px;
+  }
+  .container-why-us .contents > div{
+    width: 280px;
   }
 }
