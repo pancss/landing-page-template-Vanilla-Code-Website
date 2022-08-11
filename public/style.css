@@ -109,7 +109,10 @@ header button:hover {
   flex-direction: column;
   justify-content: center;
 }
-
+#banner h1,
+#banner p {
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+}
 #banner h1 {
   font-weight: 700;
   font-size: 38px;
@@ -312,6 +315,9 @@ header button:hover {
 }
 
 /* Why Vanillacode */
+#why-us .title br{
+  display: none;
+}
 .container-why-us {
   display: flex;
   align-items: center;
@@ -378,6 +384,7 @@ header button:hover {
 }
 #faq ul {
   cursor: pointer;
+  padding: 0;
 }
 #faq .question {
   display: flex;
@@ -484,6 +491,99 @@ section {
   margin: 40px 0 30px 0;
 }
 
+/* Sidebar */
+#sidebar {
+  display: none;
+}
+#sidebar button {
+  border: 0;
+}
+#sidebar .toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px -3px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}
+#sidebar .container-solid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#sidebar .container-solid span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -4px);
+  transition: all 0.3s ease;
+}
+#sidebar .container-solid span:nth-child(1) {
+  transform: translate(-50%, 4px);
+}
+/* Active toggle */
+#sidebar .toggle.actived span {
+  transition: all 0.3s ease;
+  background-color: var(--orange-color);
+}
+#sidebar .toggle.actived span:nth-child(1) {
+  transform: translate(-50%, 0) rotate(45deg);
+}
+#sidebar .toggle.actived span:nth-child(2) {
+  transform: translate(-50%, 0) rotate(-45deg);
+}
+/* #sidebar */
+#sidebar ul {
+  position: fixed;
+  top: 0;
+  right: -110%;
+  width: 300px;
+  height: 100%;
+  max-width: 100%;
+  padding-top: 100px;
+
+  background-color: var(--orange-color);
+  z-index: 99;
+
+  transition: all 0.5s ease-in;
+}
+#sidebar ul li {
+  list-style: none;
+  padding: 10px 0;
+}
+#sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+}
+/* actived sidebar */
+#sidebar ul.actived {
+  right: 0;
+  transition: all 0.3s ease;
+}
+/* Sidebar softlight */
+#sidebar .soft-light-bg {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 10;
+}
+
 /* Scrollbar design */
 ::-webkit-scrollbar {
   width: 10px;
@@ -497,104 +597,56 @@ section {
   background: #9c4749;
 }
 
-/* Sidebar */
-#sidebar{
-  display: none;
-}
-#sidebar button{
-  border: 0;
-}
-#sidebar .toggle{
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;  
-  box-shadow: 0 0 15px -3px rgba(0, 0, 0, 0.25);
-  z-index: 999;
-}
-#sidebar .container-solid{
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-#sidebar .container-solid span{
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: var(--bg-color);
-  border-radius: 10px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -4px);
-  transition: all .3s ease;
-}
-#sidebar .container-solid span:nth-child(1){
-  transform: translate(-50%, 4px);
-}
-/* Active toggle */
-#sidebar .toggle.actived span{
-  transition: all .3s ease;
-  background-color: var(--orange-color);
-}
-#sidebar .toggle.actived span:nth-child(1){
-  transform:  translate(-50%, 0) rotate(45deg);
-}
-#sidebar .toggle.actived span:nth-child(2){
-  transform:  translate(-50%, 0) rotate(-45deg);
-}
-/* #sidebar */
-#sidebar ul{
-  position: fixed;
-  top: 0;
-  right: -110%;
-  width: 300px;
-  height: 100%;
-  max-width: 100%;
-  padding-top: 100px;
-
-  background-color: var(--orange-color);
-  z-index: 99;
-
-  transition: all .5s ease-in;
-}
-#sidebar ul li{
-  list-style: none;
-  padding: 10px 0;
-}
-#sidebar ul li a{
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 10px;
-}
-/* actived sidebar */
-#sidebar ul.actived{
-  right: 0;
-  transition: all .3s ease;
-}
-/* Sidebar softlight */
-#sidebar .soft-light-bg{
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: .7;
-  z-index: 10;
-}
-
 @media screen and (max-width: 1100px) {
-  header{
+  header {
     display: none;
   }
-  #sidebar{
+  #banner {
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px auto -30px auto;
+    padding: 0 40px 0 40px;
+    position: relative;
+  }
+  #banner > div {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+  #banner img {
+   max-width: 100%;
+  }
+  #sidebar {
+    display: block;
+  }
+  #price-section > div {
+    overflow-x: scroll;
+    padding-bottom: 60px;
+  }
+  #price-section > div::-webkit-scrollbar {
+    height: 7px;
+  }
+  #price-section .container-prices {
+    width: max-content;
+  }
+  #price-section .container-prices > div {
+    width: 350px;
+    height: 100%;
+  }
+  section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #workflow{
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 426px){
+  .container-recent-works{
+    grid-template-columns: 1fr;
+  }
+  #why-us .title br{
     display: block;
   }
 }
