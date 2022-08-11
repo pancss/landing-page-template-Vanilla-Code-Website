@@ -35,9 +35,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
   background-color: var(--bg-color);
   box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.25);
+  z-index: 999;
 }
 nav {
   display: inline-flex;
@@ -48,6 +48,7 @@ nav li {
   margin: 0 10px;
   padding: 0 5px;
   position: relative;
+  z-index: 99;
 }
 nav li a {
   text-decoration: none;
@@ -69,7 +70,7 @@ nav li::after {
   transition: height 0.2s ease;
 }
 nav li:hover::after {
-  height: 3px;
+  height: 4px;
   transition: height 0.2s ease;
 }
 
@@ -137,7 +138,7 @@ header button:hover {
   gap: 25px;
 }
 .container-prices > div {
-  padding: 50px 30px 40px 30px;
+  padding: 50px 25px 40px 25px;
   background-color: #121b36;
   box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25),
     inset 0px 0px 3px rgba(255, 255, 255, 0.3);
@@ -160,7 +161,9 @@ header button:hover {
   justify-content: center;
   margin: 10px 0;
 }
-
+.container-prices > div ul{
+  padding-left: 25px;
+}
 .container-prices > div li {
   list-style: url(./source/check-circle-fill.svg);
   padding-left: 5px;
@@ -363,6 +366,9 @@ header button:hover {
   width: 100%;
   max-width: 700px;
 }
+#faq ul{
+  cursor: pointer;
+}
 #faq .question {
   display: flex;
   align-items: center;
@@ -380,13 +386,21 @@ header button:hover {
 }
 #faq .desc {
   color: white;
-  padding: 20px;
-  border: 1px solid var(--orange-color);
-  display: none;
-  margin-bottom: 15px;
+  border: 0px solid var(--orange-color);
+  overflow: hidden;
+  height: 0;
+  transition: height .5s ease;
 }
+/* Action desc */
+#faq ul.actived .desc {
+  height: 120px;
+  border: 1px solid var(--orange-color);
+  transition: height .5s ease-in-out;
+}
+
 #faq .desc li {
   list-style: none;
+  padding: 20px;
 }
 #faq .desc a {
   color: white;
@@ -394,11 +408,12 @@ header button:hover {
 
 /* Action FAQ */
 #faq ul.actived .desc {
-  display: block;
+  /* height: 120px; */
+  border: 1px solid var(--orange-color);
+  transition: all .5s ease-in-out;
 }
 #faq ul.actived .question {
   background-color: var(--orange-color);
-  padding: 20px;
 }
 #faq ul.actived .question i {
   color: white;
@@ -443,7 +458,7 @@ footer{
 /* elements */
 section {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 30px auto;
 }
 .title {
