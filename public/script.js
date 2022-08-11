@@ -70,11 +70,16 @@
             hideShowSidebar(false)
             // createSoftLightBg
             createSoftLightBg(false);
+            // unfix scroll
+            document.body.style.overflow = '';
         } else {
             toggle.classList.add('actived')
             // Displaysidebar
             hideShowSidebar(true)
+                // createSoftLightBg
             createSoftLightBg(true);
+            // fix scroll
+            document.body.style.overflow = 'hidden';
         }
     }
     function hideShowSidebar(result) {
