@@ -46,6 +46,10 @@ header {
   top: 0;
   left: 0;
 }
+#logo-site{
+  cursor: pointer;
+  user-select: none;
+}
 nav {
   display: inline-flex;
   margin-right: 20px;
@@ -491,6 +495,15 @@ section {
   -webkit-text-fill-color: transparent;
 
   margin: 40px 0 30px 0;
+
+  transform: translateY(15px);
+  opacity: 0;
+  transition: all .3s ease;
+}
+.title.actived {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all .3s ease;
 }
 
 /* Sidebar */

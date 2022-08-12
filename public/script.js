@@ -1,3 +1,5 @@
+
+
 (() => {
 
     function getPositionY(elem) {
@@ -55,7 +57,7 @@
         const softLight = document.createElement('div');
         softLight.className = 'soft-light-bg';
         // click toggle
-        softLight.addEventListener('click', ()=>{
+        softLight.addEventListener('click', () => {
             toggle.click();
         })
 
@@ -73,12 +75,12 @@
             // unfix scroll
             document.body.style.overflow = '';
             document.querySelector('html').style.overflow = '';
-            
+
         } else {
             toggle.classList.add('actived')
             // Displaysidebar
             hideShowSidebar(true)
-                // createSoftLightBg
+            // createSoftLightBg
             createSoftLightBg(true);
             // fix scroll
             document.body.style.overflow = 'hidden';
@@ -107,7 +109,28 @@
         target.classList.add('actived');
     }
 
+    function animationTitle() {
+        const title = document.querySelectorAll('.title');
+        let position = window.innerHeight * 0.8;
+
+        for (i = 0; i < title.length; i++) {
+            if (position > getPositionY(title[i])) {
+                if (title[i].classList.contains('actived') != true) {
+                    title[i].classList.add('actived')
+                }
+            }
+        }
+    }
+
+    function goTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
     function run() {
+        document.getElementById('logo-site').addEventListener('click', goTop)
         // EventFAQ
         const faqUl = document.querySelectorAll('#faq > ul');
         faqUl.forEach(faqUl => {
@@ -116,13 +139,15 @@
 
         // Animation Nav
         window.addEventListener('scroll', animateUnderlineHeader)
+        // Animation Title
+        window.addEventListener('scroll', animationTitle)
 
         // Toggle
         const toggle = document.querySelector('#sidebar .toggle');
         toggle.addEventListener('click', actionToggle);
         const lineSidebar = document.querySelectorAll('#sidebar li');
-        lineSidebar.forEach(lineSidebar =>{
-            lineSidebar.addEventListener('click', ()=>{
+        lineSidebar.forEach(lineSidebar => {
+            lineSidebar.addEventListener('click', () => {
                 toggle.click();
             })
         })
