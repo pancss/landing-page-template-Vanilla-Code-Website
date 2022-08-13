@@ -129,6 +129,64 @@
         });
     }
 
+    function seeAllProject(elem){
+        elem.preventDefault();
+
+        // Create Elems
+        const container = document.createElement('div');
+        const header = document.createElement('h1');
+        const desc = document.createElement('p');
+        const bgFade = document.createElement('div');
+
+        header.innerHTML = 'Oops!';
+        header.style.color = '#fa6854';
+
+        desc.innerHTML = 'Our site is under manintenance';
+        desc.style.color = '#fff';
+        desc.style.textAlign = 'center';
+        desc.style.marginTop = '15px';
+
+        container.style.display = 'flex';
+        container.style.alignItems = 'center';
+        container.style.flexDirection = 'column';
+        container.style.justifyContent = 'center';
+        container.style.width = '300px';
+        container.style.height = '150px';
+        container.style.background = '#121b36';
+        container.style.border = '1px solid #fa6854';
+        container.style.boxShadow = '0 10px 15px -3px rgba(0,0,0,30%)';
+        container.style.zIndex = '999';
+
+        bgFade.style.position = 'fixed';
+        bgFade.style.top = '0';
+        bgFade.style.left = '0';
+        bgFade.style.width = '100%';
+        bgFade.style.height = '100%';
+        bgFade.style.display = 'flex';
+        bgFade.style.alignItems = 'center';
+        bgFade.style.justifyContent = 'center';
+        bgFade.style.backgroundColor = 'rgba(0,0,0, 70%)';
+        bgFade.style.zIndex = '999';
+        
+        //append Elems
+        document.body.appendChild(bgFade)
+        bgFade.appendChild(container);
+        container.appendChild(header);
+        container.appendChild(desc);
+
+        // Disable scroll
+        document.body.style.overflow = 'hidden';
+        document.querySelector('html').style.overflow = 'hidden';
+
+        bgFade.addEventListener('click', ()=>{
+            bgFade.remove();
+
+            // Enable scroll
+            document.body.style.overflow = '';
+             document.querySelector('html').style.overflow = '';
+        })
+    }
+
     function run() {
         document.getElementById('logo-site').addEventListener('click', goTop)
         // EventFAQ
@@ -136,6 +194,8 @@
         faqUl.forEach(faqUl => {
             faqUl.addEventListener('click', function () { dropdownFAQ(this) })
         });
+
+        document.getElementById('all-works').addEventListener('click', seeAllProject);
 
         // Animation Nav
         window.addEventListener('scroll', animateUnderlineHeader)
