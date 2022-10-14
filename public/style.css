@@ -444,6 +444,32 @@ header button:hover {
   transform: rotate(45deg);
 }
 
+#our-team .teams{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+#our-team .teams .team{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+#our-team .teams img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#our-team .teams .desc .name{
+  color:white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 /* Contact-us */
 #contact-us div {
   display: flex;
@@ -688,6 +714,12 @@ section {
   }
   #why-us .title br{
     display: block;
+  }
+  #our-team .teams .team {
+    flex-direction: column;
+  }
+  #our-team .teams .team .work{
+    text-align: center;
   }
   section{
     padding-top: 20px;
